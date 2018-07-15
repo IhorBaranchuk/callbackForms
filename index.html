@@ -8,7 +8,6 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
 </head>
 <body>
 <header id="header">
@@ -136,7 +135,7 @@
                     Интернет для бизнеса
                 </div>
                 <div class="content">
-                    <p><b>Быстрый интернет</b></p>
+                    <p><b>Быстрый интернет</b></p>
                     <p>Скорость до 50 Мбит/с, без ограничения по трафику, работает в любой точке России.</p>
                     <p>Мы сделаем все сами, Вам остается только пользоваться быстрым интернетом</p>
                     <p>Подключим сервисы:</p>
@@ -163,8 +162,6 @@
                     <p>Безлимитный интернет за городом позволяет не только наслаждаться фильмами, играми и музыкой, но и
                         заказывать необходимые вещи, совершать оплату различных услуг и мгновенно получать всю нужную
                         информацию.</p>
-
-
                 </div>
             </div>
             <img src="img/g2.png" alt="#">
@@ -210,7 +207,6 @@
         <div class="icons-item"><img src="img/megafon.png" alt=""></div>
         <div class="icons-item"><img src="img/biline.jpg" alt=""></div>
     </div>
-
 </section>
 <footer id="contact">
     <div class="container">
@@ -231,11 +227,13 @@
             <div class="center">
                 <div class="phone">Контактный телефон:</div>
                 <div class="num">+7 777 7777 77 77</div>
-                <form id="form" class="form" action="handler.php">
-                    <input class="field name-f" id="name" type="text" placeholder="Ваше имя *">
-                    <input class="field num-f" id="num" type="text" placeholder="Номер телефона*">
-                    <input class="field mail-f" id="mail" type="text" placeholder="Почта">
+                <form action="handler.php" method="POST" id="form" class="form" enctype="multipart/form-data">
+                    <input class="field name-f" id="name" type="text" name="name" placeholder="Ваше имя *">
+                    <input class="field num-f" id="num" type="text" name="phone" placeholder="Номер телефона*">
+                    <input class="field mail-f" id="mail" type="text" name="mail" placeholder="Почта">
+                    <input type="file" name="uploadFile"/>
                     <input class="field sub" type="submit" value="Отправить Заявку">
+                    <input type="hidden" name="formType" value="callmail">
                 </form>
             </div>
         </div>
@@ -244,10 +242,8 @@
         </div>
     </div>
 </footer>
-
 <article class="callback popup">
     <span class="close" id="callbackCloseBtn"><i class="fa fa-times" aria-hidden="true"></i></span>
-
     <form action="handler.php" method="POST" id="form-popup" class="form">
         <h3 class="title"> Заказать звонок </h3>
         <p class="nameText">Введите имя</p>
@@ -258,7 +254,6 @@
         <input type="submit" value="Заказать звонок" class="submit" id="submit"/>
     </form>
 </article>
-
 <article class="letter popup">
     <span class="close" id="callbackCloseBtn"><i class="fa fa-times" aria-hidden="true"></i></span>
     <h3 class="title"></h3>
@@ -268,7 +263,5 @@
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
 <script src='js/common.js'></script>
-
 </body>
 </html>
-
