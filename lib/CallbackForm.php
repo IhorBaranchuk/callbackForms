@@ -1,20 +1,18 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: artem
- * Date: 18.05.17
- * Time: 19:30
- */
+
 require_once('FormAbstract.php');
+
 class CallbackForm extends FormAbstract
 {
     public $name;
     public $phone;
+
     public function __construct(string $name, string $phone)
     {
         $this->name = $name;
         $this->phone = $phone;
     }
+
     public function validate(): bool
     {
         if (empty($this->name) || strlen($this->name) > 20 || strlen($this->name) < 2) {
@@ -25,6 +23,7 @@ class CallbackForm extends FormAbstract
         }
         return true;
     }
+
     public function send()
     {
         echo 'Форма успешно отправлена!<br>';
