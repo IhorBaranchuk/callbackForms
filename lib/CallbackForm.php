@@ -1,5 +1,4 @@
 <?php
-
 require_once('FormAbstract.php');
 
 class CallbackForm extends FormAbstract
